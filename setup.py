@@ -8,5 +8,5 @@ setuptools.setup(
     url='https://github.com/YBerezhnev/BayInV',               # package URL
     install_requires=[ "numpy", "scipy", "numba", "matplotlib", "seaborn"],                    # list of packages this package depends
                                             # on.
-    packages=setuptools.find_packages(),              # List of module names that installing
+    packages=["bayinv"],              # List of module names that installing
     )
