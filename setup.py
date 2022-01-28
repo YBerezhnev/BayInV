@@ -8,7 +8,7 @@ Created on Fri Jan 28 18:55:57 2022
 import setuptools
 
 setuptools.setup(
-    name='BayInV',                    # package name
+    name='src',                    # package name
     version='0.1',                          # version
     description='Implimentation of the Bayesian least square approach for velocity changes measurements',      # short description
     url='http://example.com',               # package URL
