@@ -1,3 +1,2 @@
-
-import Inversion
-import MWCS
+from inversion import*
+from mwcs import*
