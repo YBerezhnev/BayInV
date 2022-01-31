@@ -1,2 +1,3 @@
-from inversion import*
-from mwcs import*
+
+import bayinv.inversion
+import bayinv.mwcs
