@@ -1,5 +1,5 @@
 ## Description
-This is python implimentation of Baysian least square inversion approach for relative velocity changes estimation, according to:  
+This is implimentation of Bayesian least square inversion approach for relative velocity changes estimation, according to:  
 
 * Brenguier et. al, 2014.  Mapping  pressurized  volcanic fluids   from   induced   crustal   seismic   velocity   drops,Science,345,80–82. DOI: 10.1126/science.1254073  
 
