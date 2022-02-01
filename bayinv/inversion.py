@@ -181,28 +181,22 @@ def plot_cc_matrix(cc_matrix, array_of_date):
         t.set_fontsize(18)
     plt.show()
 
-def plot_dvv_curve(dvv, std, array_of_date):
+def plot_dvv_curve(dvv, std, array_of_date, long_term_dvv=False):
     
     fig, ax = plt.subplots(1,1, figsize=(16, 4))
 
-    ax.plot(array_of_date, dvv, "o-", label='', color="black")
-    
-    #ax.plot(array_of_date, (dvv + std), label='')
-    #ax.plot(array_of_date, (dvv - std),  label='')
-
-    ax.fill_between(array_of_date, (dvv - std), (dvv + std), color="grey", alpha=0.4)
-    
+    ax.plot(array_of_date, dvv, "o-", color="black", label="short-term dvv")
+    if long_term_dvv is None:
+        ax.fill_between(array_of_date, (dvv - std), (dvv + std), color="grey", alpha=0.4)
+    else:
+        ax.plot(aarray_of_date,  "-", color="blue", label="long-term dvv")
     ax.set_ylabel(ylabel="dv/v, %", fontsize=18)
     ax.xaxis.set_minor_locator(AutoMinorLocator(5))
-
     ax.tick_params(axis='y', which='major', labelsize=14)
     ax.tick_params(axis='x', which='major', labelsize=14, labelrotation=-90)
-    
     ax.grid(True)
- 
     ax.set_xlabel("Date", fontsize=18)
-    
-
-  
+    ax.legend()
     plt.show()
+
 
