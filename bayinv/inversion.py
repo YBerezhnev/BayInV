@@ -44,7 +44,7 @@ def plot_data_distribution(dvv):
     sns.histplot(dvv,  kde=True)
     ax.set_xlabel(xlabel="dv/v, %", fontsize=20)
     ax.set_ylabel("Counts", fontsize=20)
-    ax.tick_params(labelsize=18, width=2.5, length=10)
+    ax.tick_params(labelsize=18, width=2.5, length=10, color="black")
     plt.show()
     
 
@@ -169,8 +169,8 @@ def plot_cc_matrix(cc_matrix, array_of_date):
     ax.set_xlabel("Date", fontsize=20)
     ax.set_ylabel("Date", fontsize=20)
     ax.set_title("CC matrix", fontsize=22)
-    ax.tick_params(axis='y', labelsize=18)
-    ax.tick_params(axis='x', rotation=90, labelsize=18)
+    ax.tick_params(axis='y', labelsize=18, length=10, color="black")
+    ax.tick_params(axis='x', rotation=90, labelsize=18, length=10, color="black")
     ax.invert_yaxis()
     
     cb = fig.colorbar(pcolor, extend='both')
