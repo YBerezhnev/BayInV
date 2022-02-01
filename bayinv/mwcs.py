@@ -460,7 +460,7 @@ def dv_v_for_combinations(cross_corr_mat, tmin,  freqmin, freqmax, window_length
                           dtt_maxlag=80, dtt_minlag=15, dtt_v=None, 
                           interstation_distance=None, dtt_maxdt = 0.5,
                           dtt_mincoh=0.5,dtt_maxerr=0.1):
-    
+    import scipy.signal
     n = len(cross_corr_mat)
     comb = list(itertools.combinations(np.arange(0,n), 2))
  
