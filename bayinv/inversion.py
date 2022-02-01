@@ -44,7 +44,7 @@ def plot_data_distribution(dvv):
     sns.histplot(dv/v,  kde=True)
     ax.set_xlabel(xlabel="dvv, %", fontsize=20)
     ax.set_ylabel("Counts", fontsize=20)
-    ax.tick_params(labelsize=18)
+    ax.tick_params(labelsize=18, width=2.5, length=10)
     plt.show()
     
 
