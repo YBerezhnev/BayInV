@@ -199,7 +199,7 @@ def plot_dvv_curve(dvv, std, array_of_date, long_term_dvv=None):
     ax.tick_params(axis='x', which='major', labelsize=14, labelrotation=-90)
     ax.grid(True)
     ax.set_xlabel("Date", fontsize=18)
-    ax.legend()
+    ax.legend(fontsize=14)
     plt.show()
 
 
