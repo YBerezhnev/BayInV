@@ -154,7 +154,7 @@ def correlation_coefficient_matrix(cross_corr_mat, df, dt_minlag):
 
 def plot_cc_matrix(cc_matrix, array_of_date):
     
-    fig, ax = plt.subplots(1, 1, figsize=(20, 19))
+    fig, ax = plt.subplots(1, 1, figsize=(10, 9))
     
     
     X, Y = np.meshgrid(array_of_date, array_of_date)
@@ -164,19 +164,19 @@ def plot_cc_matrix(cc_matrix, array_of_date):
     cmap = mcolors.LinearSegmentedColormap.from_list('test', colors, N=7)
     
     pcolor = ax.pcolormesh(X, Y, cc_matrix, cmap=cmap, norm=normalize)
-    ax.set_xlabel("Date", fontsize=28)
-    ax.set_ylabel("Date", fontsize=28)
-    ax.set_title("CC matrix", fontsize=32)
-    ax.tick_params(axis='y', labelsize=24)
-    ax.tick_params(axis='x', rotation=90, labelsize=24)
+    ax.set_xlabel("Date", fontsize=20)
+    ax.set_ylabel("Date", fontsize=20)
+    ax.set_title("CC matrix", fontsize=22)
+    ax.tick_params(axis='y', labelsize=18)
+    ax.tick_params(axis='x', rotation=90, labelsize=18)
     ax.invert_yaxis()
     
     cb = fig.colorbar(pcolor, extend='both')
-    cb.ax.set_ylabel("Correlation", fontsize=28)
+    cb.ax.set_ylabel("Correlation", fontsize=20)
     #cb.outline.set_color('black')
     cb.outline.set_linewidth(2)
     for t in cb.ax.get_yticklabels():
-        t.set_fontsize(24)
+        t.set_fontsize(18)
     plt.show()
 
 def plot_dvv_curve(dvv, std, array_of_date):
