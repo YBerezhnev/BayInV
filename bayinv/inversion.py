@@ -83,7 +83,7 @@ def dvv_inversion(dvv, dvv_std,indexes, lenght, beta, alpha):
     
     R_inv = np.linalg.inv(R)
     
-    m_std = np.diagonal(R_inv)
+    m_std = np.diagonal(R_inv)**0.5
     
     R_tmp = G.dot(R_inv.T)  
     R = R_tmp.T
