@@ -185,11 +185,14 @@ def plot_dvv_curve(dvv, std, array_of_date, long_term_dvv=None):
     
     fig, ax = plt.subplots(1,1, figsize=(16, 4))
 
-    ax.plot(array_of_date, dvv, "o-", color="black", label="short-term dvv")
+    
     if long_term_dvv is None:
-        ax.fill_between(array_of_date, (dvv - std), (dvv + std), color="grey", alpha=0.4)
+        ax.plot(array_of_date, dvv, "o-", color="black", label="dv/v")
+        ax.fill_between(array_of_date, (dvv - std), (dvv + std), color="grey", alpha=0.4, label="dv/v uncertanity")
     else:
-        ax.plot(array_of_date,long_term_dvv,  "-", color="blue", label="long-term dvv")
+        ax.plot(array_of_date, dvv, "o-", color="black", label="short-term dv/v")
+        ax.plot(array_of_date,long_term_dvv,  "-", color="blue", label="long-term dv/v")
+        ax.fill_between(array_of_date, (dvv - std), (dvv + std), color="grey", alpha=0.4, label="short-term dv/v uncertanity")
     ax.set_ylabel(ylabel="dv/v, %", fontsize=18)
     ax.xaxis.set_minor_locator(AutoMinorLocator(5))
     ax.tick_params(axis='y', which='major', labelsize=14)
