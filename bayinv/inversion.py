@@ -181,7 +181,7 @@ def plot_cc_matrix(cc_matrix, array_of_date):
         t.set_fontsize(18)
     plt.show()
 
-def plot_dvv_curve(dvv, std, array_of_date, long_term_dvv=False):
+def plot_dvv_curve(dvv, std, array_of_date, long_term_dvv=None):
     
     fig, ax = plt.subplots(1,1, figsize=(16, 4))
 
