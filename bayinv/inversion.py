@@ -40,8 +40,11 @@ def G_matrix(combinations, lenght):
     
 def plot_data_distribution(dvv):
     
-    fig, ax = plt.subplots(1, 1, figsize=(20, 20))
+    fig, ax = plt.subplots(1, 1, figsize=(10, 10))
     sns.histplot(dvv,  kde=True)
+    ax.set_xlabel(fontsize=20)
+    ax.set_ylabel(fontsize=20)
+    ax.ticks_params(labelsize=18)
     plt.show()
     
 
@@ -115,7 +118,6 @@ def data_filter(dvv, dvv_std, cc_pair, cc_treshold=0.3):
 def create_mask(cross_corr_mat, df, dt_minlag):
     
     n_counts = cross_corr_mat.shape[1]
-    
     center_index = np.floor((n_counts - 1.) / 2.)
     left_part = np.arange(0, center_index - df*dt_minlag + 1)
     right_part = np.arange(center_index + df*dt_minlag, n_counts)
@@ -128,7 +130,6 @@ def create_mask(cross_corr_mat, df, dt_minlag):
 def correlation_coefficient_matrix(cross_corr_mat, df, dt_minlag):
     
     mat = cross_corr_mat.copy()
-
     n = mat.shape[0]
     combinations = list(itertools.combinations(np.arange(0,n), 2))
     cross_corr_number = cross_corr_mat.shape[0]
@@ -164,6 +165,7 @@ def plot_cc_matrix(cc_matrix, array_of_date):
     cmap = mcolors.LinearSegmentedColormap.from_list('test', colors, N=7)
     
     pcolor = ax.pcolormesh(X, Y, cc_matrix, cmap=cmap, norm=normalize)
+    
     ax.set_xlabel("Date", fontsize=20)
     ax.set_ylabel("Date", fontsize=20)
     ax.set_title("CC matrix", fontsize=22)
@@ -173,8 +175,8 @@ def plot_cc_matrix(cc_matrix, array_of_date):
     
     cb = fig.colorbar(pcolor, extend='both')
     cb.ax.set_ylabel("Correlation", fontsize=20)
-    #cb.outline.set_color('black')
     cb.outline.set_linewidth(2)
+    
     for t in cb.ax.get_yticklabels():
         t.set_fontsize(18)
     plt.show()
