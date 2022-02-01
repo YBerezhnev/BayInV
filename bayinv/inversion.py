@@ -41,8 +41,8 @@ def G_matrix(combinations, lenght):
 def plot_data_distribution(dvv):
     
     fig, ax = plt.subplots(1, 1, figsize=(10, 10))
-    sns.histplot(dv/v,  kde=True)
-    ax.set_xlabel(xlabel="dvv, %", fontsize=20)
+    sns.histplot("dvv,  kde=True)
+    ax.set_xlabel(xlabel="dv/v, %", fontsize=20)
     ax.set_ylabel("Counts", fontsize=20)
     ax.tick_params(labelsize=18, width=2.5, length=10)
     plt.show()
