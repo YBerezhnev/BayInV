@@ -4,6 +4,7 @@ import scipy
 import itertools
 from numba import jit
 import scipy.fftpack as sf
+import scipy.signal
 
 @jit(nopython=True, fastmath=True)
 def linear_detrend(data):
