@@ -22,7 +22,7 @@ def Cm_matrix(n, beta):
     return Cm
 
 def Cd_inv_matrix(std): 
-    return sparse.diags(1 / std)
+    return sparse.diags(1 / std**2)
 
 def G_matrix(combinations, lenght):
     
