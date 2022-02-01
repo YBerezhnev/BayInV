@@ -17,6 +17,6 @@ The package requires the following packages to install:
 
 To install use:
 ```
-pip install git+git://https://github.com/YBerezhnev/BayInV
+pip install git+git://github.com/YBerezhnev/BayInV
 ```
 
