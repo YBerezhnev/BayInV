@@ -189,7 +189,7 @@ def plot_dvv_curve(dvv, std, array_of_date, long_term_dvv=None):
     if long_term_dvv is None:
         ax.fill_between(array_of_date, (dvv - std), (dvv + std), color="grey", alpha=0.4)
     else:
-        ax.plot(array_of_date,  "-", color="blue", label="long-term dvv")
+        ax.plot(array_of_date,long_term_dvv,  "-", color="blue", label="long-term dvv")
     ax.set_ylabel(ylabel="dv/v, %", fontsize=18)
     ax.xaxis.set_minor_locator(AutoMinorLocator(5))
     ax.tick_params(axis='y', which='major', labelsize=14)
